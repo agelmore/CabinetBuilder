@@ -34,6 +34,12 @@ class Calculator
     Panel.new x, y
   end
 
+  def drawer_face_panel(proportion)
+    x = @width - 2 * @face_clearance
+    y = drawer_height(proportion) - @face_clearance * 2
+    Panel.new x, y
+  end
+
   private
 
   def drawer_body_height(proportion)

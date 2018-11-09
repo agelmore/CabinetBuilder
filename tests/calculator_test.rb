@@ -43,4 +43,18 @@ class CalculatorTest < Test::Unit::TestCase
     assert_equal expected_height, panel.height
     assert_equal expected_width, panel.width
   end
+
+  def test_drawer_bottom
+    panel = @calculator.drawer_bottom_panel
+    expected_height = 19 + 11.0 / 32
+    expected_width = 26 + 3.0 / 32
+    assert_equal expected_height, panel.height
+    assert_equal expected_width, panel.width
+  end
+
+  def test_drawer_face
+    panel = @calculator.drawer_face_panel 1.0 / 2
+    assert_equal 14 + 115.0 / 128, panel.height
+    assert_equal 29 + 5.0 / 32, panel.width
+  end
 end
