@@ -1,3 +1,5 @@
+require_relative 'panel'
+
 class Calculator
   def initialize(width, height, depth, drawer_thickness, carcass_thickness,
                    slider_clearance, rear_clearance, top_clearance,
@@ -51,11 +53,4 @@ class Calculator
   end
 end
 
-class Panel
-  attr_accessor :width, :height
 
-  def initialize(x, y)
-    @width = x
-    @height = y
-  end
-end
